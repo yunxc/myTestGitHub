@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @author yunlong.zhang
+ * @author
  * @date 2019/2/28 13:32
  */
 //实现redis得继承Serializable接口进行序列化
