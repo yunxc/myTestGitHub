@@ -31,10 +31,47 @@ public class RedisJava {
         Map<String,Object> m= new HashMap();
         m.put("name","Success");
         m.put("wo",0);
-        m.put("u2",u2);
+        m.put("u",u2);
         li.add(m);
         u1.setLi(li);
         //jedis.set(SerializeUtil.serialize(u1),SerializeUtil.serialize(u1));
-        User user1=(User)SerializeUtil.unSerialize(jedis.get(SerializeUtil.serialize(u1)));
+        //User user1=(User)SerializeUtil.unSerialize(jedis.get(SerializeUtil.serialize(u1)));
+
+
+        User u3 = new User();
+        u3.setId(1);
+        User u4 = new User();
+        u4.setId(2);
+        List<Map<String, Object>> li1 = new ArrayList<Map<String, Object>>(16);
+        Map<String,Object> m1= new HashMap();
+        m1.put("name","Success");
+        m1.put("wo",0);
+        m1.put("u",u4);
+        li1.add(m1);
+        u3.setLi(li1);
+
+        User u5 = new User();
+        User u6 = new User();
+        m1.toString();
+        Boolean bool = SerializeUtil.serialize(u5).hashCode()==SerializeUtil.serialize(u5).hashCode();
+        if(bool){
+            System.out.println("equals相同");
+        }else {
+            System.out.println("equals不相同");
+        }
+        Boolean bool1 = u1.hashCode() == u3.hashCode();
+        if(bool1){
+            System.out.println("hashCode相同");
+        }else {
+            System.out.println("hashCode不相同");
+        }
+
+        boolean b = ClassCompareUtil.compareObject(u1, u3);
+        if(b){
+            System.out.println("compareObject相同");
+        }else {
+            System.out.println("compareObject不相同");
+        }
+
     }
 }
