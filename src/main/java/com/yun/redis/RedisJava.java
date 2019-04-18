@@ -1,5 +1,6 @@
 package com.yun.redis;
 
+import com.yun.util.MD5Util;
 import org.apache.commons.codec.digest.DigestUtils;
 import redis.clients.jedis.Jedis;
 
@@ -16,7 +17,7 @@ import java.util.Map;
  * @date 2019/2/28 13:11
  */
 public class RedisJava {
-    public static void main(String[] args) throws NoSuchAlgorithmException {
+    public static void main(String[] args) throws Exception {
         //连接本地的 Redis 服务
         Jedis jedis = new Jedis("localhost");
         System.out.println("连接成功");
@@ -73,5 +74,15 @@ public class RedisJava {
             System.out.println("compareObject不相同");
         }
 
+        Map<String, Object> m2 = new HashMap(16);
+        m2.put("1","ddddd");
+        Map<String, Object> m3 = new HashMap(16);
+        m3.put("1","ddddd");
+        boolean b1 = MD5Util.getMD5(m2.toString()).equals(MD5Util.getMD5(m3.toString()));
+        if(b1){
+            System.out.println("getMD5相同");
+        }else {
+            System.out.println("getMD5不相同");
+        }
     }
 }
