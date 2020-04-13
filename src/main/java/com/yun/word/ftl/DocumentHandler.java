@@ -1,3 +1,4 @@
+/*
 package com.yun.word.ftl;
 
 import java.io.*;
@@ -10,10 +11,12 @@ import freemarker.template.Template;
 import freemarker.template.TemplateException;
 import sun.misc.BASE64Encoder;
 
+*/
 /**
  * @author Administrator
  * @date 2019/9/19 20:33
- */
+ *//*
+
 public class DocumentHandler {
 
     private Configuration configuration = null;
@@ -49,11 +52,13 @@ public class DocumentHandler {
         }
     }
 
-    /**
+    */
+/**
      * 注意dataMap里存放的数据Key值要与模板中的参数相对应
      * @param dataMap
      *
-     */
+     *//*
+
     @SuppressWarnings("unchecked")
     private void getData(Map dataMap) {
         //       dataMap.put("image", getImageStr());
@@ -89,3 +94,4 @@ public class DocumentHandler {
     }
 
 }
+*/

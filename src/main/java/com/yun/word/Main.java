@@ -1,3 +1,4 @@
+/*
 package com.yun.word;
 
 import com.lowagie.text.*;
@@ -19,10 +20,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+*/
 /**
  * @author Administrator
  * @date 2019/9/19 18:32
- */
+ *//*
+
 public class Main {
 
     public static void main(String[] args) throws Exception {
@@ -424,12 +427,14 @@ public class Main {
         }
     }
 
-    /**
+    */
+/**
      * 对字节数组字符串进行Base64解码并生成图片
      *
      * @param imgStr imgStr
      * @return 成图片
-     */
+     *//*
+
     public static byte[] generateImage(String imgStr) {
         //图像数据为空
         if (imgStr == null) {
@@ -452,3 +457,4 @@ public class Main {
     }
 
 }
+*/

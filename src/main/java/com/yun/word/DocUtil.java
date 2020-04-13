@@ -1,3 +1,4 @@
+/*
 package com.yun.word;
 
 import java.io.File;
@@ -13,19 +14,24 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 
 //import Decoder.BASE64Encoder;
+import com.sun.org.apache.xalan.internal.xsltc.compiler.Template;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
 import freemarker.template.TemplateExceptionHandler;
 
+*/
 /**
  * @author Administrator
  * @date 2019/9/19 20:01
- */
+ *//*
+
+*/
 /**
  * 类名称：DocUtil
  * 类描述：导出word工具类
- */
+ *//*
+
 public class DocUtil {
     public Configuration configure=null;
 
@@ -33,12 +39,14 @@ public class DocUtil {
         configure= new Configuration(Configuration.getVersion());
         configure.setDefaultEncoding("utf-8");
     }
-    /**
+    */
+/**
      * 根据Doc模板生成word文件
      * @param dataMap 需要填入模板的数据
      * @param downloadType 文件名称
      * @param savePath 保存路径
-     */
+     *//*
+
     public File createDoc(Map<String,Object> dataMap,String modelPath,String downloadType,HttpServletRequest request){
         String name = "temp" + (int) (Math.random() * 100000) + ".doc";
         File f = new File(name);
@@ -67,12 +75,14 @@ public class DocUtil {
         return f;
     }
 
-    /**
+    */
+/**
      * 根据Doc模板生成word文件
      * @param dataMap 需要填入模板的数据
      * @param downloadType 文件名称
      * @param savePath 保存路径
-     */
+     *//*
+
     public void createXls(Map<String,Object> dataMap,String downloadType,String webPath,String fileName,String savePath){
         System.out.println(savePath.substring(savePath.length()-1));
         if(savePath.substring(savePath.length()-1).equals(File.separator)) {
@@ -114,3 +124,4 @@ public class DocUtil {
         }
     }
 }
+*/
