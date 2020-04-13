@@ -50,10 +50,11 @@ public class HttpClient {
 
         long startTime = System.currentTimeMillis();
         String url = "http://172.16.9.60:9967/aiap/webservice/patientinfocontroller/imageConf";
-        url = "http://www.cwl.gov.cn/cwl_admin/kjxx/findKjxx/forIssue?name=ssq&code=2013001";
-        String postJson = "{\"zdcode\":\"L97.x\",\"sscode\": \"\",\"czdcode\": \"A08.0\",\"age\": 26}";
+        url = "http://172.16.9.60:9996/drgsms/general/common/outForecast";
+        String postJson = "eyJBVFRFU1RBVElPTiI6ImZpcmVzb29uLmNvbSIsIlZJU0lUT1IiOiLkv6Hmga/np5EiLCJUSU1FU1RBTVAiOjE1NDYyNzIwMDAsIlVTRVJDT0RFIjoiIiwiUElEIjoiIiwiUVRaRCI6W3siWkRNQyI6IiIsIkpCQk0iOiIiLCJSWUJRIjoiIn0seyJaRE1DIjoiIiwiSkJCTSI6IiIsIlJZQlEiOiIifV0sIlNTSkNaIjpbeyJTU0pDWkJNIjoiIiwiU1NKQ1pSUSI6IiIsIlNTSkIiOiIifSx7IlNTSkNaQk0iOiIiLCJTU0pDWlJRIjoiIiwiU1NKQiI6IiJ9XX0=";
         String res = null;
-        res = get(url);
+        res = postJson(url, postJson);
+        //res = get(url);
         System.out.println(res);
         long endTime = System.currentTimeMillis();    //获取结束时间
     }

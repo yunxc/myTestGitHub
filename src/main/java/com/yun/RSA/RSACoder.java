@@ -29,7 +29,7 @@ public class RSACoder {
      * 密钥长度，DH算法的默认密钥长度是1024
      * 密钥长度必须是64的倍数，在512到65536位之间
      */
-    private static final int KEY_SIZE = 512;
+    private static final int KEY_SIZE = 1024;
     //公钥
     private static final String PUBLIC_KEY = "RSAPublicKey";
 
@@ -184,7 +184,7 @@ public class RSACoder {
         System.out.println("私钥:" + Base64.encodeBase64String(privateKey));
 
         System.out.println("================密钥对构造完毕,甲方将公钥公布给乙方，开始进行加密数据的传输=============");
-        String str = "RSA密码交换算法";
+        String str = "RSA密码交换算法!@#$%^&*`1234567890-=~!@#$%^&*()_+qwertyuiop[]\\';lkjhgfdsazxcvbnm,./QWERTYUIOP{}|\":LKJHGFDSAZXCVBNM<>?你好杭州";
         System.out.println("/n===========甲方向乙方发送加密数据==============");
         System.out.println("原文:" + str);
         //甲方进行数据的加密
