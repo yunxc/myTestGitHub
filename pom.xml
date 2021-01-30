@@ -19,6 +19,11 @@
             </plugin>
         </plugins>
     </build>
+
+    <properties>
+        <spring.version>5.3.2</spring.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>com.rabbitmq</groupId>
@@ -122,10 +127,10 @@
             <artifactId>commons-exec</artifactId>
             <version>1.3</version>
         </dependency>
-        <dependency>
+        <!--<dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
-        </dependency>
+        </dependency>-->
 
         <!-- word 下载 -->
         <dependency>
@@ -155,6 +160,32 @@
             <groupId>commons-httpclient</groupId>
             <artifactId>commons-httpclient</artifactId>
             <version>3.1</version>
+        </dependency>
+
+        <!--QLExpress基本语法-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>QLExpress</artifactId>
+            <version>3.2.0</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/cglib/cglib -->
+        <dependency>
+            <groupId>cglib</groupId>
+            <artifactId>cglib</artifactId>
+            <version>3.2.12</version>
         </dependency>
 
 

@@ -16,5 +16,11 @@ public class Main9 {
         System.out.println(follow_date.getDayOfMonth());
         System.out.println(follow_date.getMonthValue());
         System.out.println(follow_date.getYear());
+
+        Integer i = 3;
+        System.out.println(Integer.toBinaryString(i));
+
+        System.out.println(i << 2);
+        System.out.println(Integer.toBinaryString(i << 2));
     }
 }
