@@ -26,7 +26,7 @@ import java.util.Map;
  * @date 2019/9/19 18:32
  *//*
 
-public class Main {
+public class MainServer {
 
     public static void main(String[] args) throws Exception {
         List<Map<String, Object>> listclo = new ArrayList<>();

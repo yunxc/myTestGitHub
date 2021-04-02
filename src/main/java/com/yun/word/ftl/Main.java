@@ -9,7 +9,7 @@ import java.io.IOException;
  * @date 2019/9/19 20:34
  *//*
 
-public class Main {
+public class MainServer {
     public static void main(String[] args) throws IOException {
         // TODO Auto-generated method stub
         DocumentHandler dh=new DocumentHandler();
