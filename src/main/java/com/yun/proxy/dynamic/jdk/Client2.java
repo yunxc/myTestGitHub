@@ -11,7 +11,7 @@ public class Client2 {
 
     public static void main(String[] args) throws IllegalAccessException, InstantiationException {
         // 设置变量可以保存动态代理类，默认名称以 $Proxy0 格式命名
-        // System.getProperties().setProperty("sun.misc.ProxyGenerator.saveGeneratedFiles", "true");
+        //System.getProperties().setProperty("sun.misc.ProxyGenerator.saveGeneratedFiles", "true");
         // 1. 创建被代理的对象，UserService接口的实现类
         UserServiceImpl userServiceImpl = new UserServiceImpl();
         // 2. 获取对应的 ClassLoader
