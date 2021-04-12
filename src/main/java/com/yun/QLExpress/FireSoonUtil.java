@@ -122,7 +122,7 @@ public class FireSoonUtil {
          */
         l1.add("A<=100 and B >= 3 * M");
         l1.add("A > 100 and A <= 300 and B >= 2 * M");
-        l1.add("A > 300 and B >= 1.5 * M");
+        l1.add("A > 300 and B >= 1.5 * M and 等级 != \"三\"");
         rule.put("高倍率", l1);
         List<String> l2 = new ArrayList<>(2);
         l2.add("B < 0.4 * M");
@@ -136,6 +136,7 @@ public class FireSoonUtil {
         context.put("A", 500);
         context.put("B", 60);
         context.put("M", 10);
+        context.put("等级", "一");
         Object o1 = ruleCalculation(rule, context);
         System.out.println("o1 result:" + o1);
 
