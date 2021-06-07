@@ -113,6 +113,30 @@ public class FireSoonUtil {
     }
 
     public static void main(String[] args) throws Exception {
+        String expressString = "if (A>100 and B >5) then {return C*100;} " +
+                "else if (A>50 and B > 5) then {return (A*100) + 1;} " +
+                "else {return 0;}";
+        IExpressContext<String, Object> context1 = new DefaultContext<>();
+        context1.put("A", 10);
+        context1.put("B", 10);
+        context1.put("C", 5);
+
+        context1.put("医疗总费用", 10);
+        context1.put("地区DRG均费", 10);
+        context1.put("基准点数", 5);
+        context1.put("上限裁剪率", 6);
+
+        //expressString = "if (A>100 and B >5) then {return ({if(A<10) then {return 0;} else { return 1;}};)}";
+
+        expressString = "if(((1 == 1)))  then {return\n" +
+                "(医疗总费用 > 地区DRG均费 and 医疗总费用 < (基准点数 * (上限裁剪率 - 1)) * 0.7)?\n" +
+                "\t((医疗总费用-地区DRG均费)/地区均费*100):(基准点数*(上限裁剪率 - 1) * 0.7)\n" +
+                "\t;}";
+
+        Object o = expressionEvaluation(expressString, context1);
+        System.out.println("=============o:=========="+ o);
+
+
         LinkedHashMap<String, List<String>> rule = new LinkedHashMap<>(3);
         List<String> l1 = new ArrayList<>(3);
         /**
@@ -132,7 +156,7 @@ public class FireSoonUtil {
         rule.put("正常", l3);
 
 
-        IExpressContext<String, Object> context =new DefaultContext<>();
+        IExpressContext<String, Object> context = new DefaultContext<>();
         context.put("A", 500);
         context.put("B", 60);
         context.put("M", 10);
